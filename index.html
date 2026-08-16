@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Quiz TikTok Studio</title>
 <meta name="description" content="Application de bureau qui génère des vidéos de quiz verticales, localement, et les publie sur TikTok.">
+<script>
+  // Le portail TikTok enregistre parfois la racine du domaine comme adresse
+  // de retour plutôt que /callback.html. Si le code d'autorisation arrive
+  // ici, on le relaie vers la page qui sait l'afficher — sans quoi il
+  // faudrait le pêcher à la main dans une page qui ne l'affiche pas.
+  (function () {
+    var q = location.search;
+    if (/[?&](code|error)=/.test(q)) {
+      location.replace('callback.html' + q);
+    }
+  })();
+</script>
 <style>
   :root {
     --bg: #ffffff; --bg-2: #f6f7f9; --text: #16181d; --muted: #5b6270;
