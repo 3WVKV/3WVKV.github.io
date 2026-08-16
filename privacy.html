@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confidentialité — Quiz TikTok Studio</title>
+<style>
+  :root { --bg:#fff; --bg-2:#f6f7f9; --text:#16181d; --muted:#5b6270; --line:#e3e6ec; --accent:#fe2c55; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#101216; --bg-2:#171a20; --text:#eef0f4; --muted:#99a1b0; --line:#262b34; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:56px 22px 80px; }
+  h1 { font-size:28px; margin:0 0 6px; }
+  h2 { font-size:18px; margin:34px 0 8px; }
+  .date { color:var(--muted); font-size:14px; margin:0 0 30px; }
+  li { margin:6px 0; }
+  a { color:var(--accent); }
+  footer { margin-top:46px; padding-top:18px; border-top:1px solid var(--line); font-size:14px; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Politique de confidentialité</h1>
+<p class="date">Quiz TikTok Studio — dernière mise à jour : 16 août 2026.</p>
+
+<p><strong>Quiz TikTok Studio est une application de bureau qui s'exécute sur l'ordinateur
+de son utilisateur.</strong> Il n'existe aucun serveur exploité par l'éditeur : aucune donnée
+d'utilisateur n'est collectée, transmise ou stockée ailleurs que sur la machine où
+l'application est installée.</p>
+
+<h2>Données traitées, et où elles restent</h2>
+<ul>
+  <li><strong>Projets de quiz, vidéos rendues, images et sons</strong> — écrits dans le dossier
+    de données local de l'application. Ils ne quittent jamais la machine.</li>
+  <li><strong>Jetons d'accès TikTok</strong> — obtenus lorsque l'utilisateur connecte
+    lui-même son compte, et enregistrés dans un fichier local
+    (<code>data/tiktok.json</code>). Ils ne sont transmis qu'à TikTok, pour les appels
+    que l'utilisateur déclenche.</li>
+  <li><strong>Statistiques lues chez TikTok</strong> — profil, nombre d'abonnés, liste des
+    vidéos publiées et leurs compteurs. Elles sont affichées à l'utilisateur et gardées
+    en cache local pour rester consultables hors connexion. Elles ne sont ni agrégées,
+    ni revendues, ni communiquées à un tiers.</li>
+  <li><strong>Clés d'API</strong> de services tiers éventuellement configurés par
+    l'utilisateur (modèle de langage) — enregistrées localement, utilisées uniquement pour
+    appeler le service que l'utilisateur a choisi.</li>
+</ul>
+
+<h2>Ce que l'application ne fait pas</h2>
+<ul>
+  <li>aucune mesure d'audience, aucun traceur, aucune télémétrie ;</li>
+  <li>aucun accès à un compte TikTok autre que celui connecté par l'utilisateur ;</li>
+  <li>aucune publication automatique : chaque envoi vient d'un clic ou d'une programmation
+    décidée par l'utilisateur, annulable à tout moment ;</li>
+  <li>aucun partage de données avec un tiers, à titre gratuit ou onéreux.</li>
+</ul>
+
+<h2>Services tiers</h2>
+<p>L'application appelle des services extérieurs uniquement à la demande de l'utilisateur :
+l'API TikTok lorsqu'un compte est connecté, le fournisseur de modèle de langage choisi
+dans les réglages, et le cas échéant une banque d'images libres pour illustrer une
+réponse. Chacun applique sa propre politique de confidentialité.</p>
+
+<h2>Suppression</h2>
+<p>Déconnecter le compte depuis l'application révoque le jeton auprès de TikTok et efface
+le fichier qui le contenait, ainsi que le cache des statistiques. Désinstaller
+l'application et supprimer son dossier de données supprime définitivement l'ensemble des
+informations traitées.</p>
+
+<h2>Contact</h2>
+<p>Pour toute question relative à cette politique, ouvrez un ticket sur
+<a href="https://github.com/3WVKV/quiztok-studio/issues">le dépôt du projet</a>.</p>
+
+<footer><a href="index.html">← Retour</a> · <a href="terms.html">Conditions d'utilisation</a></footer>
+
+</div>
+</body>
+</html>

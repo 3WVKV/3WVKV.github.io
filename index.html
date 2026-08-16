@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz TikTok Studio</title>
+<meta name="description" content="Application de bureau qui génère des vidéos de quiz verticales, localement, et les publie sur TikTok.">
+<style>
+  :root {
+    --bg: #ffffff; --bg-2: #f6f7f9; --text: #16181d; --muted: #5b6270;
+    --line: #e3e6ec; --accent: #fe2c55;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #101216; --bg-2: #171a20; --text: #eef0f4; --muted: #99a1b0; --line: #262b34; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 22px 80px; }
+  h1 { font-size: 34px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -.02em; }
+  h2 { font-size: 19px; margin: 40px 0 10px; }
+  .tag { color: var(--muted); font-size: 17px; margin: 0 0 34px; }
+  ul { padding-left: 20px; }
+  li { margin: 7px 0; }
+  .card { background: var(--bg-2); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin: 18px 0; }
+  .card h3 { margin: 0 0 6px; font-size: 15px; }
+  .card p { margin: 0; color: var(--muted); font-size: 14.5px; }
+  code { background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-size: 14px; }
+  footer { margin-top: 52px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Quiz TikTok Studio</h1>
+  <p class="tag">Une application de bureau qui écrit, habille et rend des vidéos de quiz verticales — sur votre machine, puis les publie sur votre compte TikTok.</p>
+
+  <h2>Ce que fait l'application</h2>
+  <ul>
+    <li>génère les questions d'un quiz sur un sujet donné, avec un modèle de langage local ou une API de votre choix ;</li>
+    <li>vérifie chaque question par un contre-test avant de la garder ;</li>
+    <li>lit le quiz avec une voix de synthèse et assemble une vidéo verticale 1080 × 1920 avec ffmpeg ;</li>
+    <li>prépare le titre, la description et les hashtags de la publication ;</li>
+    <li>affiche les statistiques de votre chaîne et envoie les vidéos rendues sur TikTok.</li>
+  </ul>
+  <p>Génération, synthèse vocale et rendu vidéo s'exécutent <strong>entièrement en local</strong>. Rien n'est envoyé à un serveur de l'éditeur : il n'y en a pas.</p>
+
+  <h2>L'intégration TikTok</h2>
+
+  <div class="card">
+    <h3>Statistiques de votre chaîne</h3>
+    <p>Abonnés, j'aime, et pour chacune de vos vidéos les vues, likes, commentaires et partages. L'application rattache chaque vidéo publiée au quiz qui l'a produite, pour montrer quels univers fonctionnent le mieux. Ces chiffres ne sont affichés qu'à vous, sur votre machine.</p>
+  </div>
+
+  <div class="card">
+    <h3>Envoi des vidéos</h3>
+    <p>La vidéo que l'application vient de rendre est envoyée à votre compte, avec une légende que vous relisez et modifiez avant l'envoi. Chaque envoi part d'un clic explicite, ou d'une programmation que vous avez décidée et que vous pouvez annuler. Rien n'est publié automatiquement.</p>
+  </div>
+
+  <div class="card">
+    <h3>Vos identifiants restent chez vous</h3>
+    <p>Les jetons d'accès obtenus par la connexion TikTok sont écrits dans un fichier local de l'application. Ils ne transitent par aucun autre service, et l'application n'accède qu'au compte que vous avez connecté vous-même.</p>
+  </div>
+
+  <h2>Installation</h2>
+  <p>Application Windows, exécutée localement. Elle demande <code>ffmpeg</code> pour le rendu vidéo, et un modèle de langage local (Ollama) ou une clé d'API si vous préférez un service distant.</p>
+
+  <footer>
+    <p><a href="privacy.html">Confidentialité</a> · <a href="terms.html">Conditions d'utilisation</a></p>
+    <p>Projet personnel, sans société éditrice ni collecte de données.</p>
+  </footer>
+
+</div>
+</body>
+</html>
